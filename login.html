@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Log in · Archons Posts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: {
+                colors: {
+                    bg: "#10152A", panel: "#262D52", alt: "#323A6E", head: "#1A2040",
+                    field: "#343C73", gold: "#EBB74A", muted: "#A7B0DC", amber: "#8A5B25", pill: "#D3D4DA"
+                },
+                fontFamily: { main: ["Lilita One", "sans-serif"], logo: ["Orbitron", "sans-serif"] }
+            } }
+        }
+    </script>
+</head>
+<body class="bg-bg text-white font-main min-h-screen flex flex-col items-center justify-center gap-4 p-4">
+
+    <a href="index.html" class="flex items-center gap-2.5 text-gold">
+        <svg class="w-6 h-7" viewBox="0 0 32 36" aria-hidden="true">
+            <path d="M16 0C7 0 0 7 0 16c0 9 6 20 16 20s16-11 16-20C32 7 25 0 16 0Z" fill="currentColor"/>
+            <path d="M5 15c3 0 6 1.5 8 4-3 1-6 .5-8-1.5Z M27 15c-3 0-6 1.5-8 4 3 1 6 .5 8-1.5Z" fill="#10152A"/>
+        </svg>
+        <span class="font-logo text-xl tracking-wider">ARCHONS POSTS</span>
+    </a>
+
+    <section class="w-full max-w-3xl grid md:grid-cols-2 bg-panel border border-[#323a6b] rounded overflow-hidden">
+
+        <!-- Izquierda -->
+        <aside class="flex flex-col items-center justify-center text-center p-8 bg-gradient-to-br from-[#12172E] via-panel to-amber">
+            <img src="assets/icons/paimon_login.png" alt="Paimon" class="w-36 mb-3">
+            <h2 class="text-lg mb-3">Welcome back, Traveler</h2>
+            <p class="text-sm text-muted">Share your builds, and find the best<br>team for your companions</p>
+        </aside>
+
+        <!-- Derecha -->
+        <div class="flex flex-col p-8 md:px-10 md:py-12">
+            <h1 class="text-xl text-gold mb-3">Log in</h1>
+
+            <form action="#">
+                <label for="user" class="block mt-2 mb-1.5 ml-1 text-sm text-gold">Username or Email</label>
+                <input id="user" type="text" placeholder="Pepita de los palotes"
+                       class="w-full h-8 px-4 text-xs text-white placeholder:text-muted bg-field border border-gold rounded-full outline-none focus:ring-2 focus:ring-gold/50">
+
+                <label for="pass" class="block mt-3 mb-1.5 ml-1 text-sm text-gold">Password</label>
+                <div class="relative">
+                    <input id="pass" type="password" placeholder="••••••••••••••"
+                           class="w-full h-8 pl-4 pr-10 text-xs text-white placeholder:text-muted bg-field border border-gold rounded-full outline-none focus:ring-2 focus:ring-gold/50">
+                    <button type="button" aria-label="Show password" class="absolute right-3 top-1/2 -translate-y-1/2 text-muted">
+                        <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </button>
+                </div>
+
+                <div class="flex items-center justify-between mt-4 mb-6 text-xs">
+                    <label class="flex items-center gap-1.5 text-muted cursor-pointer">
+                        <input type="checkbox" class="accent-gold"> Remember me
+                    </label>
+                    <a href="forgot-password.html" class="text-gold hover:underline">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="w-full h-8 text-sm text-[#1B1B33] bg-gold rounded-full hover:brightness-110">LOG IN</button>
+            </form>
+
+            <p class="my-4 text-sm text-center text-muted">or</p>
+
+            <div class="flex gap-2">
+                <a href="#" aria-label="Google" class="flex-1 h-8 grid place-items-center text-muted border border-gold rounded-full hover:bg-gold/10 hover:text-gold">
+                    <img src="assets/icons/google_logo.svg" alt="" class="w-4 h-4">
+                </a>
+                <a href="#" aria-label="Reddit" class="flex-1 h-8 grid place-items-center text-muted border border-gold rounded-full hover:bg-gold/10 hover:text-gold">
+                    <img src="assets/icons/reddit_logo.svg" alt="" class="w-4 h-4">
+                </a>
+                <a href="#" aria-label="Discord" class="flex-1 h-8 grid place-items-center text-muted border border-gold rounded-full hover:bg-gold/10 hover:text-gold">
+                    <img src="assets/icons/discord_logo.svg" alt="" class="w-4 h-4">
+                </a>
+                <a href="#" aria-label="X" class="flex-1 h-8 grid place-items-center text-muted border border-gold rounded-full hover:bg-gold/10 hover:text-gold">
+                    <img src="assets/icons/x_logo.svg" alt="" class="w-3.5 h-3.5">
+                </a>
+            </div>
+
+            <p class="mt-4 text-xs text-center text-muted">New around here? <a href="register.html" class="text-gold hover:underline">Create an account</a></p>
+        </div>
+    </section>
+</body>
+</html>

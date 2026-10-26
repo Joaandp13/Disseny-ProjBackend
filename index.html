@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Archons Posts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: {
+                colors: {
+                    bg: "#10152A", panel: "#262D52", alt: "#323A6E", head: "#1A2040",
+                    field: "#343C73", gold: "#EBB74A", muted: "#A7B0DC", amber: "#8A5B25", pill: "#D3D4DA"
+                },
+                fontFamily: { main: ["Lilita One", "sans-serif"], logo: ["Orbitron", "sans-serif"] }
+            } }
+        }
+    </script>
+</head>
+<body class="bg-bg text-white font-main">
+
+<header class="grid grid-cols-[1fr_auto_1fr] items-center px-5 py-2 bg-panel font-logo text-gold">
+    <a href="index.html" class="flex items-center gap-2.5 justify-self-start">
+        <svg class="w-[22px] h-[25px]" viewBox="0 0 32 36" aria-hidden="true">
+                <path d="M16 0C7 0 0 7 0 16c0 9 6 20 16 20s16-11 16-20C32 7 25 0 16 0Z" fill="currentColor"/>
+                <path d="M5 15c3 0 6 1.5 8 4-3 1-6 .5-8-1.5Z M27 15c-3 0-6 1.5-8 4 3 1 6 .5 8-1.5Z" fill="#10152A"/>
+            </svg>
+        <span class="text-base tracking-wider hidden sm:inline">ARCHONS POSTS</span>
+    </a>
+    <a class="text-sm hover:underline">Newsletter</a>
+    <nav class="justify-self-end text-sm"><a href="login.html" class="hover:underline">Login</a> or <a href="register.html" class="hover:underline">Register</a></nav>
+</header>
+
+<main class="grid grid-cols-1 lg:grid-cols-[140px_minmax(0,640px)_140px] justify-center items-start gap-7 px-4 pt-11 pb-16">
+
+    <!-- Banners -->
+    <aside class="order-2 lg:order-1 grid grid-cols-3 lg:flex lg:flex-col gap-3 lg:gap-7 lg:pt-9">
+        <h2 class="col-span-3 text-xs text-gold lg:-mb-2">Current Banners</h2>
+        <div class="aspect-[130/72] overflow-hidden rounded-sm bg-gradient-to-br from-[#2c3468] to-[#4a3a2a]"><img src="assets/banner-1.png" alt="Banner 1" class="w-full h-full object-cover"></div>
+        <div class="aspect-[130/72] overflow-hidden rounded-sm bg-gradient-to-br from-[#2c3468] to-[#4a3a2a]"><img src="assets/banner-2.png" alt="Banner 2" class="w-full h-full object-cover"></div>
+        <div class="aspect-[130/72] overflow-hidden rounded-sm bg-gradient-to-br from-[#2c3468] to-[#4a3a2a]"><img src="assets/banner-3.png" alt="Banner 3" class="w-full h-full object-cover"></div>
+    </aside>
+
+    <!-- Centro -->
+    <section class="order-1 lg:order-2 min-w-0">
+        <form action="#" class="grid w-full min-w-0 grid-cols-2 sm:grid-cols-[minmax(0,1.4fr)_minmax(0,1.4fr)_minmax(0,1.4fr)_minmax(0,1fr)_minmax(0,.7fr)] gap-3.5 mb-3.5">
+            <div>
+                <label for="f-title" class="block mb-0.5 text-xs text-gold">Title</label>
+                <div class="flex items-center h-7 px-3 rounded-full bg-pill text-[#2a2e4a]">
+                    <input id="f-title" type="text" placeholder="Lohen Melt..." class="flex-1 min-w-0 text-xs bg-transparent outline-none placeholder:text-[#6B6F85]">
+                    <svg viewBox="0 0 24 24" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M16 16l5 5"/></svg>
+                </div>
+            </div>
+            <div>
+                <label for="f-author" class="block mb-0.5 text-xs text-gold">Author</label>
+                <div class="flex items-center h-7 px-3 rounded-full bg-pill text-[#2a2e4a]">
+                    <input id="f-author" type="text" placeholder="TravelerPaimon..." class="flex-1 min-w-0 text-xs bg-transparent outline-none placeholder:text-[#6B6F85]">
+                    <svg viewBox="0 0 24 24" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M16 16l5 5"/></svg>
+                </div>
+            </div>
+            <div>
+                <label for="f-reaction" class="block mb-0.5 text-xs text-gold">Reaction</label>
+                <div class="flex items-center h-7 px-3 rounded-full bg-pill text-[#2a2e4a]">
+                    <input id="f-reaction" type="text" placeholder="HyperBloom..." class="flex-1 min-w-0 text-xs bg-transparent outline-none placeholder:text-[#6B6F85]">
+                    <svg viewBox="0 0 24 24" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M16 16l5 5"/></svg>
+                </div>
+            </div>
+            <div>
+                <label for="f-role" class="block mb-0.5 text-xs text-gold">Role</label>
+                <select id="f-role" class="w-full h-7 px-2 text-xs rounded-full bg-pill text-[#6B6F85] outline-none"><option>DPS...</option></select>
+            </div>
+            <div>
+                <label for="f-order" class="block mb-0.5 text-xs text-gold">Order</label>
+                <select id="f-order" class="w-full h-7 px-2 text-xs rounded-full bg-pill text-[#6B6F85] outline-none"><option>Likes ↑</option></select>
+            </div>
+        </form>
+
+        <div class="overflow-x-auto border border-[#323a6b] rounded-sm bg-panel">
+            <table class="w-full min-w-[620px] text-center text-xs">
+                <thead class="bg-head text-gold">
+                    <tr>
+                        <th class="py-2.5 px-2 w-12"><span class="sr-only">Element</span></th>
+                        <th class="py-2.5 px-2 font-normal text-left">Build Name</th>
+                        <th class="py-2.5 px-2 font-normal">Calculated DPS</th>
+                        <th class="py-2.5 px-2 font-normal">Role</th>
+                        <th class="py-2.5 px-2 font-normal">Team</th>
+                        <th class="py-2.5 px-2 font-normal">Author</th>
+                        <th class="py-2.5 px-2 font-normal">Likes</th>
+                        <th class="py-2.5 px-2 font-normal">Views</th>
+                    </tr>
+                </thead>
+                <tbody class="[&>tr:nth-child(even)]:bg-alt">
+                    <tr class="hover:brightness-110">
+                        <td class="py-2 px-2"><img src="assets/icons/electro_icon.webp" class="inline w-[22px] h-[22px]" alt="Electro"></td>
+                        <td class="py-2 px-2 text-left">Sample Text</td>
+                        <td class="py-2 px-2">Sample text</td>
+                        <td class="py-2 px-2 text-muted">Sample text</td>
+                        <td class="py-2 px-2 text-muted">Team_Images</td>
+                        <td class="py-2 px-2 text-muted">FulatinoXx</td>
+                        <td class="py-2 px-2 text-muted whitespace-nowrap"><img src="assets/heart.svg" alt="" class="inline w-4 h-4 mr-1 -mt-0.5">67</td>
+                        <td class="py-2 px-2 text-muted">200</td>
+                    </tr>
+                    <tr class="hover:brightness-110">
+                        <td class="py-2 px-2"><img src="assets/icons/pyro_icon.webp" class="inline w-[22px] h-[22px]" alt="Pyro"></td>
+                        <td class="py-2 px-2 text-left">Sample Text</td>
+                        <td class="py-2 px-2">Sample text</td>
+                        <td class="py-2 px-2 text-muted">Sample text</td>
+                        <td class="py-2 px-2 text-muted">Team_Images</td>
+                        <td class="py-2 px-2 text-muted">FulatinoXx</td>
+                        <td class="py-2 px-2 text-muted whitespace-nowrap"><img src="assets/heart.svg" alt="" class="inline w-4 h-4 mr-1 -mt-0.5">67</td>
+                        <td class="py-2 px-2 text-muted">200</td>
+                    </tr>
+                    <tr class="hover:brightness-110">
+                        <td class="py-2 px-2"><img src="assets/icons/hydro_icon.webp" class="inline w-[22px] h-[22px]" alt="Hydro"></td>
+                        <td class="py-2 px-2 text-left">Sample Text</td>
+                        <td class="py-2 px-2">Sample text</td>
+                        <td class="py-2 px-2 text-muted">Sample text</td>
+                        <td class="py-2 px-2 text-muted">Team_Images</td>
+                        <td class="py-2 px-2 text-muted">FulatinoXx</td>
+                        <td class="py-2 px-2 text-muted whitespace-nowrap"><img src="assets/heart.svg" alt="" class="inline w-4 h-4 mr-1 -mt-0.5">67</td>
+                        <td class="py-2 px-2 text-muted">200</td>
+                    </tr>
+                    <tr class="hover:brightness-110">
+                        <td class="py-2 px-2"><img src="assets/icons/anemo_icon.webp" class="inline w-[22px] h-[22px]" alt="Anemo"></td>
+                        <td class="py-2 px-2 text-left">Sample Text</td>
+                        <td class="py-2 px-2">Sample text</td>
+                        <td class="py-2 px-2 text-muted">Sample text</td>
+                        <td class="py-2 px-2 text-muted">Team_Images</td>
+                        <td class="py-2 px-2 text-muted">FulatinoXx</td>
+                        <td class="py-2 px-2 text-muted whitespace-nowrap"><img src="assets/heart.svg" alt="" class="inline w-4 h-4 mr-1 -mt-0.5">67</td>
+                        <td class="py-2 px-2 text-muted">200</td>
+                    </tr>
+                    <tr class="hover:brightness-110">
+                        <td class="py-2 px-2"><img src="assets/icons/cryo_icon.webp" class="inline w-[22px] h-[22px]" alt="Cryo"></td>
+                        <td class="py-2 px-2 text-left">Sample Text</td>
+                        <td class="py-2 px-2">Sample text</td>
+                        <td class="py-2 px-2 text-muted">Sample text</td>
+                        <td class="py-2 px-2 text-muted">Team_Images</td>
+                        <td class="py-2 px-2 text-muted">FulatinoXx</td>
+                        <td class="py-2 px-2 text-muted whitespace-nowrap"><img src="assets/heart.svg" alt="" class="inline w-4 h-4 mr-1 -mt-0.5">67</td>
+                        <td class="py-2 px-2 text-muted">200</td>
+                    </tr>
+                    <tr class="hover:brightness-110">
+                        <td class="py-2 px-2"><img src="assets/icons/geo_icon.webp" class="inline w-[22px] h-[22px]" alt="Geo"></td>
+                        <td class="py-2 px-2 text-left">Sample Text</td>
+                        <td class="py-2 px-2">Sample text</td>
+                        <td class="py-2 px-2 text-muted">Sample text</td>
+                        <td class="py-2 px-2 text-muted">Team_Images</td>
+                        <td class="py-2 px-2 text-muted">FulatinoXx</td>
+                        <td class="py-2 px-2 text-muted whitespace-nowrap"><img src="assets/heart.svg" alt="" class="inline w-4 h-4 mr-1 -mt-0.5">67</td>
+                        <td class="py-2 px-2 text-muted">200</td>
+                    </tr>
+                    <tr class="hover:brightness-110">
+                        <td class="py-2 px-2"><img src="assets/icons/dendro_icon.webp" class="inline w-[22px] h-[22px]" alt="Dendro"></td>
+                        <td class="py-2 px-2 text-left">Sample Text</td>
+                        <td class="py-2 px-2">Sample text</td>
+                        <td class="py-2 px-2 text-muted">Sample text</td>
+                        <td class="py-2 px-2 text-muted">Team_Images</td>
+                        <td class="py-2 px-2 text-muted">FulatinoXx</td>
+                        <td class="py-2 px-2 text-muted whitespace-nowrap"><img src="assets/heart.svg" alt="" class="inline w-4 h-4 mr-1 -mt-0.5">67</td>
+                        <td class="py-2 px-2 text-muted">200</td>
+                    </tr>
+                    <tr class="hover:brightness-110">
+                        <td class="py-2 px-2"><img src="assets/icons/pyro_icon.webp" class="inline w-[22px] h-[22px]" alt="Pyro"></td>
+                        <td class="py-2 px-2 text-left">Sample Text</td>
+                        <td class="py-2 px-2">Sample text</td>
+                        <td class="py-2 px-2 text-muted">Sample text</td>
+                        <td class="py-2 px-2 text-muted">Team_Images</td>
+                        <td class="py-2 px-2 text-muted">FulatinoXx</td>
+                        <td class="py-2 px-2 text-muted whitespace-nowrap"><img src="assets/heart.svg" alt="" class="inline w-4 h-4 mr-1 -mt-0.5">67</td>
+                        <td class="py-2 px-2 text-muted">200</td>
+                    </tr>
+                    <tr class="hover:brightness-110">
+                        <td class="py-2 px-2"><img src="assets/icons/hydro_icon.webp" class="inline w-[22px] h-[22px]" alt="Hydro"></td>
+                        <td class="py-2 px-2 text-left">Sample Text</td>
+                        <td class="py-2 px-2">Sample text</td>
+                        <td class="py-2 px-2 text-muted">Sample text</td>
+                        <td class="py-2 px-2 text-muted">Team_Images</td>
+                        <td class="py-2 px-2 text-muted">FulatinoXx</td>
+                        <td class="py-2 px-2 text-muted whitespace-nowrap"><img src="assets/heart.svg" alt="" class="inline w-4 h-4 mr-1 -mt-0.5">67</td>
+                        <td class="py-2 px-2 text-muted">200</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Eventos -->
+    <aside class="order-3 grid grid-cols-3 lg:flex lg:flex-col gap-3 lg:gap-7 lg:pt-9">
+        <h2 class="col-span-3 text-xs text-gold lg:-mb-2">Active Events</h2>
+        <div class="aspect-[130/66] overflow-hidden rounded-sm bg-gradient-to-br from-[#2c3468] to-[#4a3a2a]"><img src="assets/event-1.png" alt="Evento 1" class="w-full h-full object-cover"></div>
+        <div class="aspect-[130/66] overflow-hidden rounded-sm bg-gradient-to-br from-[#2c3468] to-[#4a3a2a]"><img src="assets/event-2.png" alt="Evento 2" class="w-full h-full object-cover"></div>
+        <div class="aspect-[130/66] overflow-hidden rounded-sm bg-gradient-to-br from-[#2c3468] to-[#4a3a2a]"><img src="assets/event-3.png" alt="Evento 3" class="w-full h-full object-cover"></div>
+    </aside>
+
+</main>
+</body>
+</html>
